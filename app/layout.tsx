@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Sora } from "next/font/google";
 import "./globals.css";
+import { SiteFooter } from "@/components/site-footer";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${sora.variable} ${nunitoSans.variable} antialiased`}>
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
