@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, ShieldCheck, UserRoundSearch, X } from "lucide-react";
+import { BadgeCheck, Menu, ShieldCheck, Sparkles, UserRoundSearch, X } from "lucide-react";
 import { useState } from "react";
 
 const BENEFICIOS = [
@@ -50,6 +50,30 @@ const DEPOIMENTOS = [
   },
 ];
 
+const PLANOS_PREVIEW = [
+  {
+    nome: "Gratis",
+    preco: "R$0",
+    descricao: "Para conhecer a plataforma",
+    itens: ["Perfis limitados", "Filtros basicos", "Sem contato direto"],
+    destaque: false,
+  },
+  {
+    nome: "Familia Plus",
+    preco: "R$69/mes",
+    descricao: "Para encontrar e conversar com seguranca",
+    itens: ["Mensagens ilimitadas", "Filtros avancados", "Agendamento de entrevistas"],
+    destaque: true,
+  },
+  {
+    nome: "Familia Premium",
+    preco: "R$159/mes",
+    descricao: "Para familias com acompanhamento proximo",
+    itens: ["Matching assistido", "Checklist de onboarding", "Suporte prioritario"],
+    destaque: false,
+  },
+];
+
 export default function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -68,6 +92,9 @@ export default function LandingPage() {
             <a href="#depoimentos" className="transition hover:text-foreground">
               Depoimentos
             </a>
+            <Link href="/planos" className="transition hover:text-foreground">
+              Planos
+            </Link>
           </nav>
           <div className="hidden items-center gap-3 md:flex">
             <Link
@@ -97,6 +124,7 @@ export default function LandingPage() {
             <a href="#como-funciona">Como funciona</a>
             <a href="#beneficios">Beneficios</a>
             <a href="#depoimentos">Depoimentos</a>
+            <Link href="/planos">Planos</Link>
             <Link
               href="/onboarding"
               className="rounded-full bg-brand px-4 py-2 text-center text-sm font-semibold text-white"
@@ -187,6 +215,48 @@ export default function LandingPage() {
                 <p className="text-foreground-soft">&ldquo;{item.texto}&rdquo;</p>
                 <footer className="mt-4 font-semibold text-slate-900">{item.nome}</footer>
               </blockquote>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16 rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">
+                <Sparkles size={14} /> Monetizacao pronta para escalar
+              </span>
+              <h2 className="mt-3 text-3xl font-semibold">Planos transparentes para cada momento</h2>
+            </div>
+            <Link
+              href="/planos"
+              className="rounded-full border border-brand/20 bg-brand/5 px-5 py-2 text-sm font-semibold text-brand transition hover:bg-brand/10"
+            >
+              Ver detalhes dos planos
+            </Link>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {PLANOS_PREVIEW.map((plano) => (
+              <article
+                key={plano.nome}
+                className={`rounded-3xl border p-5 ${
+                  plano.destaque
+                    ? "border-brand/30 bg-brand/5 shadow-md shadow-brand/10"
+                    : "border-black/5 bg-background-soft"
+                }`}
+              >
+                <p className="text-sm font-semibold text-foreground-soft">{plano.nome}</p>
+                <p className="mt-1 text-3xl font-semibold text-slate-900">{plano.preco}</p>
+                <p className="mt-1 text-sm text-foreground-soft">{plano.descricao}</p>
+                <ul className="mt-4 space-y-2 text-sm">
+                  {plano.itens.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-foreground-soft">
+                      <BadgeCheck size={15} className="text-brand" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </section>
