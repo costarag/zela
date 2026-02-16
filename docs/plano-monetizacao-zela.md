@@ -20,22 +20,22 @@ Por que esse modelo:
 - Filtros basicos
 - Sem contato direto
 
-### Plano `Familia Plus` - **R$49 a R$79/mes**
+### Plano `Familia Plus` - **R$129 a R$179/mes**
 - Mensagens ilimitadas
 - Filtros avancados
 - Agendamento de entrevistas
 - Suporte prioritario
 
-### Plano `Familia Premium` - **R$129 a R$199/mes**
+### Plano `Familia Premium` - **R$299 a R$499/mes**
 - Tudo do Plus
 - Matching assistido (curadoria)
 - Checklist de onboarding
 - Revisao mensal do plano de cuidado
 
 ### `Taxa de Sucesso` (opcional no primeiro fechamento)
-- **R$99 a R$299** no momento da contratacao confirmada via plataforma
+- **R$299 a R$1.290** no momento da contratacao confirmada via plataforma
 
-### Plano `Cuidador Pro` - **R$29 a R$59/mes**
+### Plano `Cuidador Pro` - **R$79 a R$149/mes**
 - Destaque no perfil
 - Fluxo de verificacao priorizado
 - Mais slots de entrevista
@@ -46,7 +46,7 @@ Por que esse modelo:
 ## 3) Add-ons de Alta Margem
 
 - Verificacao de identidade/antecedentes (com markup sobre parceiro)
-- `Match Concierge` (curadoria humana): **R$149 a R$399**
+- `Match Concierge` (curadoria humana): **R$390 a R$990**
 - Pacote de documentacao de cuidado (rotina, medicacao, checklist)
 - Garantia de reposicao emergencial (upsell para assinantes)
 

@@ -60,14 +60,14 @@ const PLANOS_PREVIEW = [
   },
   {
     nome: "Familia Plus",
-    preco: "R$69/mes",
+    preco: "R$149/mes",
     descricao: "Para encontrar e conversar com seguranca",
     itens: ["Mensagens ilimitadas", "Filtros avancados", "Agendamento de entrevistas"],
     destaque: true,
   },
   {
     nome: "Familia Premium",
-    preco: "R$159/mes",
+    preco: "R$349/mes",
     descricao: "Para familias com acompanhamento proximo",
     itens: ["Matching assistido", "Checklist de onboarding", "Suporte prioritario"],
     destaque: false,

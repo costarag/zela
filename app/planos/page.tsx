@@ -13,7 +13,7 @@ const PLANOS_FAMILIA = [
   },
   {
     nome: "Familia Plus",
-    preco: "R$69",
+    preco: "R$149",
     periodo: "/mes",
     descricao: "O plano mais escolhido para achar e conversar com seguranca.",
     itens: ["Mensagens ilimitadas", "Filtros avancados", "Agendamento de entrevistas", "Suporte prioritario"],
@@ -22,7 +22,7 @@ const PLANOS_FAMILIA = [
   },
   {
     nome: "Familia Premium",
-    preco: "R$159",
+    preco: "R$349",
     periodo: "/mes",
     descricao: "Acompanhamento assistido para familias com rotina mais complexa.",
     itens: [
@@ -40,19 +40,19 @@ const EXTRAS = [
   {
     titulo: "Taxa de Sucesso",
     descricao: "Cobrada apenas no fechamento da primeira contratacao confirmada pela plataforma.",
-    valor: "R$99 a R$299",
+    valor: "R$299 a R$1.290",
     icon: Handshake,
   },
   {
     titulo: "Match Concierge",
     descricao: "Curadoria humana para familias que querem recomendacao pronta em menos tempo.",
-    valor: "R$149 a R$399",
+    valor: "R$390 a R$990",
     icon: ShieldCheck,
   },
   {
     titulo: "Cuidador Pro",
     descricao: "Plano para cuidadores com destaque de perfil e mais oportunidades de entrevista.",
-    valor: "R$29 a R$59/mes",
+    valor: "R$79 a R$149/mes",
     icon: BriefcaseBusiness,
   },
 ];
