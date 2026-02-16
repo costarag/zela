@@ -1,37 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zela
 
-## Getting Started
+Zela is a responsive single-page experience (built with Next.js App Router) to help families in Brazil find elder caregivers with confidence.
 
-First, run the development server:
+The product flow is:
+
+- Landing page (`/`)
+- Onboarding wizard (`/onboarding`)
+- Dashboard (`/dashboard`)
+
+All UI copy is in pt-BR.
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React + TypeScript
+- Tailwind CSS
+- Lucide React
+- Recharts
+- OpenAI SDK (`openai`)
+
+## Local Development
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create your environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+3. Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Defined in `.env.example`:
 
-## Learn More
+- `OPENAI_API_KEY`: required for the AI assistant
+- `OPENAI_MODEL`: optional model override (default: `gpt-4.1-mini`)
 
-To learn more about Next.js, take a look at the following resources:
+If `OPENAI_API_KEY` is missing, the app shows a graceful fallback message in the assistant widget.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` - start local dev server
+- `npm run lint` - run ESLint
+- `npm run build` - create production build
+- `npm run start` - run production server
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repo to GitHub.
+2. Import the project in Vercel.
+3. Set environment variables:
+   - `OPENAI_API_KEY`
+   - `OPENAI_MODEL` (optional)
+4. Deploy.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# zela
+## Built with Coding Assistants
+
+This project was bootstrapped quickly with coding assistants.
+
+- Primary workflow: `opencode`
+- Model used: `GPT-5.3` (`openai/gpt-5.3-codex`)
