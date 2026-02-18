@@ -1,74 +1,68 @@
 # Zela
+> The trusted marketplace for elderly home care in Brazil
 
-Zela is a responsive single-page experience (built with Next.js App Router) to help families in Brazil find elder caregivers with confidence.
+[![Live](https://img.shields.io/badge/Live-zela--ashen.vercel.app-black?style=flat-square)](https://zela-ashen.vercel.app/) ![Next.js](https://img.shields.io/badge/Next.js_16-black?style=flat-square&logo=next.js) ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
-The product flow is:
+![Zela screenshot](https://api.microlink.io/?url=https%3A%2F%2Fzela-ashen.vercel.app%2F&screenshot=true&meta=false&embed=screenshot.url)
 
-- Landing page (`/`)
-- Onboarding wizard (`/onboarding`)
-- Dashboard (`/dashboard`)
+**→ Live at [zela-ashen.vercel.app](https://zela-ashen.vercel.app/)**
 
-All UI copy is in pt-BR.
+---
+
+## The Problem
+
+Families in Brazil searching for elder caregivers face a fragmented, slow, and unsafe process. There's no reliable platform: finding a trustworthy caregiver means relying on informal referrals, with no transparency on background, pricing, or quality. Brazil has 32M+ elderly today — growing to 70M by 2050 — and a R$12B+ home care market with no digital reference.
+
+## The Solution
+
+Zela is a premium marketplace that transforms a stressful search into a safe, guided decision. Families get verified caregiver profiles, smart need-based matching, in-app communication, and AI-assisted care tracking. The core insight: trust is the product — everything in Zela is designed to reduce risk at every step of the hiring and care journey.
+
+## Key Features
+
+- **Verified caregiver profiles** with experience, availability, and ratings
+- **Need-based matching** filtered by specialty, schedule, and budget
+- **In-app messaging** and interview scheduling
+- **AI care assistant** for day-to-day guidance (pt-BR)
+- **Care progress tracking** — mood, mobility, medication, sleep indicators
+- **Smart onboarding** that collects routine, needs, and budget to power recommendations
+
+## Business Model
+
+Hybrid model — recurring subscription + success fee:
+
+| Segment | Model | Price |
+|---------|-------|-------|
+| Families (Plus) | Monthly subscription | R$149/mo |
+| Families (Premium) | Subscription + concierge | R$249/mo |
+| Families (Família Plus) | Multi-elderly | R$349/mo |
+| Success fee (basic caregiver) | Per confirmed hire | R$299 |
+| Success fee (specialized) | Per confirmed hire | R$590 |
+| Success fee (live-in) | Per confirmed hire | R$1.290 |
+| Caregiver Pro Plan | Profile boost + analytics | TBD |
 
 ## Tech Stack
 
-- Next.js 16 (App Router)
-- React + TypeScript
-- Tailwind CSS
-- Lucide React
-- Recharts
-- OpenAI SDK (`openai`)
+| Layer | Choice |
+|-------|--------|
+| Framework | Next.js 16 (App Router) |
+| AI | OpenAI `gpt-4.1-mini` |
+| Language | TypeScript |
+| Runtime | Bun |
+| Styling | Tailwind CSS 4 |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Hosting | Vercel |
 
-## Local Development
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Create your environment file:
+## Running Locally
 
 ```bash
-cp .env.example .env.local
+bun install
+cp .env.example .env.local  # add your OPENAI_API_KEY
+bun dev
 ```
 
-3. Start dev server:
+Open `http://localhost:3000`.
 
-```bash
-npm run dev
-```
+---
 
-4. Open `http://localhost:3000`.
-
-## Environment Variables
-
-Defined in `.env.example`:
-
-- `OPENAI_API_KEY`: required for the AI assistant
-- `OPENAI_MODEL`: optional model override (default: `gpt-4.1-mini`)
-
-If `OPENAI_API_KEY` is missing, the app shows a graceful fallback message in the assistant widget.
-
-## Scripts
-
-- `npm run dev` - start local dev server
-- `npm run lint` - run ESLint
-- `npm run build` - create production build
-- `npm run start` - run production server
-
-## Deploy on Vercel
-
-1. Push this repo to GitHub.
-2. Import the project in Vercel.
-3. Set environment variables:
-   - `OPENAI_API_KEY`
-   - `OPENAI_MODEL` (optional)
-4. Deploy.
-
-## Built with Coding Assistants
-
-This project was bootstrapped quickly with coding assistants.
-
-- Primary workflow: `opencode`
-- Model used: `GPT-5.3` (`openai/gpt-5.3-codex`)
+*Bootstrapped with AI coding assistants in hours, not weeks.*
